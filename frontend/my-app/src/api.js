@@ -2,5 +2,5 @@
 import axios from 'axios';
 
 export default axios.create({
-  baseURL: 'http://localhost:5000/api/students', // Or your actual backend URL
+  baseURL: 'https://webassignment-3.onrender.com/api/students', // Or your actual backend URL
 });

@@ -1,7 +1,8 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: '/students' // Vite proxy will forward this to http://localhost:5000/students
+ baseURL: 'http://localhost:5000/api'
+
 });
 
 export default api;

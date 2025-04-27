@@ -42,9 +42,10 @@ const StudentList = () => {
   // Filter students based on search term and filters
   const filteredStudents = students.filter(student => {
     const matchesSearch = searchTerm === '' || 
-      `${student.firstName} ${student.lastName}`.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      student.email.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      student.studentId.toLowerCase().includes(searchTerm.toLowerCase());
+    (`${student.firstName} ${student.lastName}`).toLowerCase().includes(searchTerm.toLowerCase()) ||
+    student.email.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    student.studentId.toLowerCase().includes(searchTerm.toLowerCase());
+  
       
     const matchesStatus = statusFilter === '' || 
       (statusFilter === 'active' && student.isActive) ||
@@ -133,7 +134,7 @@ const StudentList = () => {
                   <td data-label="Enrollment">{student.enrollmentYear}</td>
                   <td data-label="DOB">{new Date(student.dob).toLocaleDateString()}</td>
                   <td data-label="Status">
-                    <span className={`status-badge ${student.isActive ? 'status-active' : 'status-inactive'}`}>
+                  <span className={`status-badge ${student.isActive ? 'status-active' : 'status-inactive'}`}>
                       {student.isActive ? 'Active' : 'Inactive'}
                     </span>
                   </td>
