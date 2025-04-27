@@ -1,0 +1,119 @@
+/* Home.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #dbeafe, #f0f4ff);
+  color: #333;
+}
+
+.home-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: radial-gradient(circle at 20% 20%, #dbeafe, #e0ecff);
+  padding: 2rem;
+}
+
+.home-glass-card {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(20px);
+  border-radius: 25px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  padding: 3rem 4rem;
+  text-align: center;
+  max-width: 600px;
+  width: 100%;
+  animation: slideFade 0.8s ease;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.home-glass-card h1 {
+  font-size: 3rem;
+  color: #003366;
+  margin-bottom: 1rem;
+}
+
+.home-glass-card p {
+  font-size: 1.2rem;
+  color: #222;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.home-btns {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 0.8rem 1.6rem;
+  font-size: 1rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.btn.primary {
+  background: linear-gradient(to right, #1e3a8a, #3b82f6);
+  color: white;
+  border: none;
+}
+
+.btn.primary:hover {
+  transform: scale(1.05);
+  background: linear-gradient(to right, #1d4ed8, #2563eb);
+}
+
+.btn.secondary {
+  background: #ffffff;
+  color: #1e40af;
+  border: 2px solid #1e3a8a;
+}
+
+.btn.secondary:hover {
+  background-color: #e0ecff;
+  transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes slideFade {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.btn.warning {
+  background: linear-gradient(to right, #f59e0b, #facc15);
+  color: white;
+  border: none;
+}
+
+.btn.warning:hover {
+  transform: scale(1.05);
+  background: linear-gradient(to right, #f59e0b, #eab308);
+}
+
+.btn.danger {
+  background: linear-gradient(to right, #dc2626, #ef4444);
+  color: white;
+  border: none;
+}
+
+.btn.danger:hover {
+  transform: scale(1.05);
+  background: linear-gradient(to right, #b91c1c, #dc2626);
+}
+
+ 

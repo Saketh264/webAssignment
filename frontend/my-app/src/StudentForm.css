@@ -1,0 +1,188 @@
+/* StudentForm.css */
+.student-form-container {
+  padding: 3rem 2rem;
+  max-width: 800px;
+  margin: 2rem auto;
+  background: #ffffff;
+  min-height: 90vh;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+.student-form-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.student-form-header h2 {
+  font-size: 2.5rem;
+  color: #1e3a8a;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  background: linear-gradient(to right, #1e3a8a, #3b82f6);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.student-form-header p {
+  color: #64748b;
+  font-size: 1.1rem;
+}
+
+.student-form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.8rem;
+}
+
+.student-form .form-group {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.student-form .form-group label {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #334155;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.student-form .form-group input[type="text"],
+.student-form .form-group input[type="email"],
+.student-form .form-group input[type="date"],
+.student-form .form-group input[type="number"],
+.student-form .form-group select {
+  padding: 1rem 1.2rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  font-size: 1rem;
+  background-color: #f8fafc;
+  outline: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.student-form .form-group input[type="text"]:focus,
+.student-form .form-group input[type="email"]:focus,
+.student-form .form-group input[type="date"]:focus,
+.student-form .form-group input[type="number"]:focus,
+.student-form .form-group select:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+  background-color: #ffffff;
+}
+
+.student-form .checkbox-group {
+  display: flex;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+.student-form .form-group input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  margin-right: 0.75rem;
+  accent-color: #3b82f6;
+  cursor: pointer;
+}
+
+.student-form .checkbox-label {
+  color: #475569;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.student-form button {
+  padding: 1rem 2rem;
+  background: linear-gradient(to right, #1e3a8a, #3b82f6);
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  margin-top: 1.5rem;
+  box-shadow: 0 4px 6px rgba(30, 58, 138, 0.15);
+  position: relative;
+  overflow: hidden;
+}
+
+.student-form button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(30, 58, 138, 0.2);
+}
+
+.student-form button:active {
+  transform: translateY(0);
+}
+
+.student-form button:disabled {
+  background: #e2e8f0;
+  color: #94a3b8;
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+}
+
+.student-form button::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+      to bottom right,
+      rgba(255, 255, 255, 0.3),
+      rgba(255, 255, 255, 0)
+  );
+  transform: rotate(30deg);
+  transition: all 0.3s ease;
+}
+
+.student-form button:hover::after {
+  left: 100%;
+}
+
+.error {
+  color: #ef4444;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.error-icon {
+  font-size: 1rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .form-row {
+      grid-template-columns: 1fr;
+  }
+  
+  .student-form-container {
+      padding: 2rem 1.5rem;
+      margin: 1rem;
+  }
+  
+  .student-form-header h2 {
+      font-size: 2rem;
+  }
+}
+
