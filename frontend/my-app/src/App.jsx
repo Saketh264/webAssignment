@@ -4,7 +4,7 @@ import Home from './Home';
 import Navbar from './Navbar';
 import StudentList from './studentList';
 import StudentForm from './StudentForm';
-import EditStudent from './editStudent';
+import EditStudent from './EditStudent';
 
 
 function App() {
